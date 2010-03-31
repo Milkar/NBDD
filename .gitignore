@@ -1,0 +1,8 @@
+log/*.log
+tmp/*
+tem/**/*
+doc/api
+doc/app
+db/*.sqlite3
+*.swp
+*~
