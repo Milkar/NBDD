@@ -1,7 +1,9 @@
 require 'spec_helper'
 
 describe MainController do
-
+  
+  integrate_views
+  
   #Delete these examples and add some real ones
   it "should use MainController" do
     controller.should be_an_instance_of(MainController)
@@ -12,6 +14,12 @@ describe MainController do
     it "should be successful" do
       get 'home'
       response.should be_success
+    end
+  
+    it "should have the right title" do 
+      get 'home'
+      response.should have_tag("title",
+                              "NBBD app | Home")
     end
   end
 
