@@ -19,7 +19,7 @@ describe MainController do
     it "should have the right title" do 
       get 'home'
       response.should have_tag("title",
-                              "NBBD app | Home")
+                              "NBDD app | Home")
     end
   end
 
