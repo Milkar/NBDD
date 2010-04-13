@@ -23,10 +23,8 @@ class User < ActiveRecord::Base
   def has_password?(submitted_password)
     # Compare encrypt_password with the encrypted version of
     # submitted_password.
-#    puts "encrypt_password is #{encrypt_password}"
     puts "encrypt the submitted password       is ",encrypt(submitted_password)
     encrypted_password == encrypt(submitted_password)
-#    puts "has password will be run"
   end
   
   def self.authenticate(email, submitted_password)
@@ -35,11 +33,18 @@ class User < ActiveRecord::Base
     return user if user.has_password?(submitted_password)
   end
    
+  def remember_me!
+    self.remember_token = encrypt("#{salt}--#{id}")
+    save_without_validation
+  end
+   
   private 
   
     def encrypt_password
-      self.salt = make_salt
-      self.encrypted_password = encrypt(password)
+      unless password.nil?
+        self.salt = make_salt
+        self.encrypted_password = encrypt(password)
+      end
     end
     
     def encrypt(string)
