@@ -51,7 +51,7 @@ describe UsersController do
       end
       
       it "should have the right title" do
-        post :creat, :user => @attributes 
+        post :create, :user => @attributes 
         response.should render_template('new')
       end
       
@@ -77,16 +77,16 @@ describe UsersController do
       
       it "should redirect to the user show page" do
         post :create, :user => @attributes 
-        respond.should redirect_to(user_url(@user))
+        response.should redirect_to(user_url(@user))
       end
       
       it "should have a welcome message" do
-        post :creat, :user => @attributes 
+        post :create, :user => @attributes 
         flash[:success].should =~ /Welcom/i   
       end
       
       it "should sign the user in" do
-        post :creat, :user => @attributes 
+        post :create, :user => @attributes 
         controller.should be_signed_in   
       end
     end

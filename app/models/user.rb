@@ -23,7 +23,6 @@ class User < ActiveRecord::Base
   def has_password?(submitted_password)
     # Compare encrypt_password with the encrypted version of
     # submitted_password.
-    puts "encrypt the submitted password       is ",encrypt(submitted_password)
     encrypted_password == encrypt(submitted_password)
   end
   

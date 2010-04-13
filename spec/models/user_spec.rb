@@ -128,7 +128,7 @@ describe User do
   describe "remember me" do
     
     before(:each) do
-      @user = User.create!(@attr)
+      @user = User.create!(@valid_attributes)
     end
     
     it "should have a remember_me! method" do

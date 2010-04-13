@@ -45,10 +45,10 @@ ActionController::Routing::Routes.draw do |map|
   #map.contact '/help', :controller => 'main', :action => 'help'
   map.resources :users
   map.signup '/signup', :controller => 'users', :action => 'new'
-  map.signin '/signip', :controller => 'users', :action => 'new'
+  
   
   map.resources :sessions, :only => [:new, :create, :destroy]
-  map.signip '/signin', :controller => 'sessions', :action => 'new'
+  map.signin '/signin', :controller => 'sessions', :action => 'new'
   map.signout '/signout', :controller => 'sessions', :action => 'destroy'
   
   map.connect ':controller/:action/:id'

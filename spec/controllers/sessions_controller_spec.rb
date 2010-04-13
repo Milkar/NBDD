@@ -17,7 +17,7 @@ describe SessionsController do
     
     it "should have the right title" do
       get :new 
-      response.should have_tag("title", /sign ip/i)
+      response.should have_tag("title", /sign in/i)
     end
   end#  describe "GET 'new'" do
   
@@ -49,8 +49,8 @@ describe SessionsController do
         @user = Factory(:user)
         @attributes = { :email => @user.email, :password => @user.password }
         User.should_receive(:authenticate).
-        with(@user.email, @user.password).
-        and_return(@user)
+          with(@user.email, @user.password).
+          and_return(@user)
       end
       
       it "should sign the user in" do
@@ -72,9 +72,9 @@ describe SessionsController do
     
     it "should sign a user out" do
       test_sign_in(Factory(:user))
-      controller.should be_sign_in
+      controller.should be_signed_in
       delete :destroy
-      controller.should_not be_sign_in
+      controller.should_not be_signed_in
       response.should redirect_to(root_path)
     end
   end# describe "DELETE 'destroy'" do
