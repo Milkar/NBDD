@@ -7,9 +7,16 @@
 		</td>
 	</tr>
 	<tr>
+		
+		<% if @user.has_contact? %>
 		<td class="sidebar round">
-			<strong>Name</strong> <%= @user.name %><br />
-			<strong>URL</strong> <%= link_to user_path(@user), @user %>
+			<%= render :partial => "contact_form"%>>
 		</td>
+		<% else %>
+		<td class="sidebar round">	
+			<strong>There is no contact. pls add one</strong> <br />
+			
+		</td>
+		<% end %>
 	</tr>	
 </table>

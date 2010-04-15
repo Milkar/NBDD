@@ -1,6 +1,9 @@
 require 'digest'
 
 class User < ActiveRecord::Base
+  has_many :contacts
+  
+  
   attr_accessible :name, :email, :password, :password_confirmation
   attr_accessor :password
   
@@ -14,9 +17,6 @@ class User < ActiveRecord::Base
   
   validates_confirmation_of :password
    
-  
-  
-  
   before_save :encrypt_password
   
   # Return true if the user's password matches the submitted password.
@@ -36,6 +36,15 @@ class User < ActiveRecord::Base
     self.remember_token = encrypt("#{salt}--#{id}")
     save_without_validation
   end
+  
+  def has_contact?
+    !contact_id.nil?
+  end
+  
+  def contact_list
+    contacts.map {|contact| contact.companyName}
+  end
+   
    
   private 
   
