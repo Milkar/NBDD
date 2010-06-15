@@ -14,4 +14,18 @@ describe ContactsController do
       response.should be_success
     end
   end
+
+  describe "GET 'delete'" do
+    it "should be successful" do
+      get 'delete'
+      response.should be_success
+    end
+  end
+
+  describe "GET 'show'" do
+    it "should be successful" do
+      get 'show'
+      response.should be_success
+    end
+  end
 end

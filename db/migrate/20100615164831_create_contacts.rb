@@ -1,7 +1,9 @@
 class CreateContacts < ActiveRecord::Migration
   def self.up
     create_table :contacts do |t|
-      t.string :companyName
+      t.string :company
+      t.string :address
+      t.string :tel
 
       t.timestamps
     end

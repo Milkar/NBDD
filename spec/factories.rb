@@ -1,6 +1,8 @@
-Factory.define :testUser do |user|
-  user.name   "Milkar"
-  user.email  "milkar@gmail.com"
-  user.password "testPassword"
-  user.password_confirmation "testPassword"
+Factory.define :user, :class => User do |u|
+  u.name   "Milkar"
+  u.email  "milkar@gmail.com"
+  u.password "testPassword"
+  u.password_confirmation "testPassword"
 end
+
+

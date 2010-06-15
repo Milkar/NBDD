@@ -5,19 +5,10 @@ require 'spec_helper'
       get '/'
       response.should render_template('main/home')
     end
-    it "should have a Contact page at '/contact'" do
-      get '/contact'
-      response.should render_template('main/contact')
-    end
     it "should have an About page at '/about'" do
       get '/about'
       response.should render_template('main/about')
     end
-#    it "should have a Help page at '/help'" do
-#      get '/help'
-#      response.should render_template('main/help')
-#    end
-
     it "should have a signup page at '/signup'" do
       get '/signup'
       response.should render_template('users/new')
@@ -46,7 +37,9 @@ require 'spec_helper'
         response.should have_tag("a[href=?]", signout_path, "Sign out")
       end
       
-      it "should have a profile link"
+      it "should have a profile link" do 
+        
+      end
     end
 
   end

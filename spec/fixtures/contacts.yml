@@ -1,7 +1,11 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  companyName: MyString
+  company: MyString
+  address: MyString
+  tel: MyString
 
 two:
-  companyName: MyString
+  company: MyString
+  address: MyString
+  tel: MyString

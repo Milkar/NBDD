@@ -9,7 +9,6 @@ Feature: register as member
    	And I should see "Help"
    	And I should see "Sign up now!"
    	And I should see "About"
-   	And I should see "Contact"
    	And I should see "Softloop GmbH"
    	 
  

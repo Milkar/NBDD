@@ -4,36 +4,53 @@ describe MainController do
   
   integrate_views
   
-  #Delete these examples and add some real ones
-  it "should use MainController" do
-    controller.should be_an_instance_of(MainController)
-  end
-
-
+  #Test for Home page with the right title and sign up link
   describe "GET 'home'" do
     it "should be successful" do
       get 'home'
       response.should be_success
     end
-  
-    it "should have the right title" do 
+      
+    it "should have the right title" do   
       get 'home'
-      response.should have_tag("title",
-                              "NBDD app | Home")
+      response.should have_tag("title", "NBDD app | Home")
     end
+    
+    it "should have the right link for sign up" do
+      get 'home'
+      response.should have_tag('a', 'Sign un now!')        
+    end
+    
+    it "should have the right link for home" do
+      get 'home'
+      response.should have_tag('a', 'Home')        
+    end
+    
+    it "should have the right link for help" do
+      get 'home'
+      response.should have_tag('a', 'Help')        
+    end
+    
+    it "should have the right link for sign in" do
+      get 'home'
+      response.should have_tag('a', 'Sign in')        
+    end   
   end
 
-  describe "GET 'contact'" do
-    it "should be successful" do
-      get 'contact'
-      response.should be_success
-    end
-  end
+  
   
   describe "GET 'about'" do
     it "should be successful" do
       get 'about'
       response.should be_success
     end
+    
+    it "should have the right title" do 
+      get 'about'
+      response.should have_tag("title",
+                              "NBDD app | About")
+    end
   end
+  
+  
 end
