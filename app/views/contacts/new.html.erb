@@ -1,2 +1,22 @@
-<h1>Contacts#new</h1>
-<p>Find me in app/views/contacts/new.html.erb</p>
+<h1>new contact form</h1>
+
+<%= render :partial => "user_name" %>
+<% form_for(@contact) do |f| %>
+	<%= f.error_messages %>
+	<div class="field">
+		<%= f.label :name %><br />
+		<%= f.text_field :company %>
+	</div>
+	<div class="field">
+		<%= f.label :address%><br />
+		<%= f.text_field :address%>
+	</div>
+	<div class="field">
+		<%= f.label :tel %><br />
+		<%= f.text_field :tel %>
+	</div>
+	<div class="actions">
+		<%= f.submit "New Contact" %>
+	</div>
+<% end %>
+

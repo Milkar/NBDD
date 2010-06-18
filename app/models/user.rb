@@ -2,7 +2,7 @@ require 'digest'
 
 class User < ActiveRecord::Base
   has_many :contacts
-  
+  has_many :clients
   
   attr_accessible :name, :email, :password, :password_confirmation
   attr_accessor :password
@@ -37,8 +37,8 @@ class User < ActiveRecord::Base
     save_without_validation
   end
   
-  def has_contact?
-    !contact_id.nil?
+  def has_client?
+    
   end
   
   def contact_list

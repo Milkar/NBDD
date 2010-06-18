@@ -8,19 +8,19 @@
 	</tr>
 	<tr>
 		
-		<% if @user.has_contact? %>
+		<% if @user.has_client? %>
 		<td class="sidebar round">
-			<%= render :partial => "contact_form"%>>
+			<%= render :partial => "client_form"%>>
 		</td>
 		<% else %>
 		<td class="sidebar round">	
-			<strong>There is no contact. pls add one</strong> <br />
+			<strong>There is no client. pls add one</strong> <br />
 			
 		</td>
-		
-		<% end %>
-		<td class="">	
-			<%= link_to "add contact", add_contact_path, :class => " round" %>			
+		<td class="sidebar ">	
+			<%= link_to "add client", add_client_path, :class => " round" %>			
 		</td>
+		<% end %>
+		
 	</tr>	
 </table>

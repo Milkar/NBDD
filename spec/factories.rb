@@ -5,4 +5,8 @@ Factory.define :user, :class => User do |u|
   u.password_confirmation "testPassword"
 end
 
-
+Factory.define :valid_contact, :class => Contact do |c|
+  c.company   "Milkar"
+  c.address  "Milkar address"
+  c.tel "Milkar tel"
+end

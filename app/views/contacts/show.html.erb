@@ -1,2 +1,9 @@
 <h1>Contacts#show</h1>
-<p>Find me in app/views/contacts/show.html.erb</p>
+<p>
+
+    <% @contacts.each do |@contact| %>
+    <%= @contact.company%>
+    <br />
+    <% end %>
+</p>
+

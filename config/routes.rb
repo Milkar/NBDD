@@ -1,4 +1,12 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :clients
+
+  map.resources :clients
+
+  map.resources :clients
+
+  map.resources :clients
+
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:
@@ -51,9 +59,23 @@ ActionController::Routing::Routes.draw do |map|
   map.signout '/signout', :controller => 'sessions', :action => 'destroy'
   
   #route for contact
-  map.resources :contacts
-  map.add_contact '/users/:id/contact', :controller => 'contact', :action => 'new'
-  map.delete_contact '/signin', :controller => 'contact', :action => 'destroy'
+  #map.resources :contacts
+  #map.add_contact '/users/:id/contact', :controller => 'contact', :action => 'new'
+  #map.delete_contact '/signin', :controller => 'contact', :action => 'destroy'
+  
+#  map.resources :users do |users|
+#    users.resources :contacts
+#  end
+#  map.add_contact '/users/:id/contact', :controller => 'contacts', :action => 'new'
+#  map.resources :contacts
+#map.resources :contacts, :path_prefix => '/users/:id', 
+#
+  map.resources :users do |users|
+    users.resources :clients
+  end
+#  map.resourecs :users, has_many => :clients
+  map.add_client '/users/:id/client', :controller => 'clients', :action => 'new'
+#  map.resources :clients
   
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
