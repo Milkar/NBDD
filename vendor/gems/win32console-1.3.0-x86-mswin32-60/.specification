@@ -1,0 +1,189 @@
+--- !ruby/object:Gem::Specification 
+name: win32console
+version: !ruby/object:Gem::Version 
+  hash: 27
+  prerelease: false
+  segments: 
+  - 1
+  - 3
+  - 0
+  version: 1.3.0
+platform: x86-mswin32-60
+authors: 
+- Gonzalo Garramuno
+- Justin Bailey
+- Luis Lavena
+autorequire: 
+bindir: bin
+cert_chain: []
+
+date: 2010-03-14 00:00:00 +01:00
+default_executable: 
+dependencies: 
+- !ruby/object:Gem::Dependency 
+  name: rubyforge
+  prerelease: false
+  requirement: &id001 !ruby/object:Gem::Requirement 
+    none: false
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        hash: 9
+        segments: 
+        - 2
+        - 0
+        - 3
+        version: 2.0.3
+  type: :development
+  version_requirements: *id001
+- !ruby/object:Gem::Dependency 
+  name: gemcutter
+  prerelease: false
+  requirement: &id002 !ruby/object:Gem::Requirement 
+    none: false
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        hash: 19
+        segments: 
+        - 0
+        - 3
+        - 0
+        version: 0.3.0
+  type: :development
+  version_requirements: *id002
+- !ruby/object:Gem::Dependency 
+  name: rake-compiler
+  prerelease: false
+  requirement: &id003 !ruby/object:Gem::Requirement 
+    none: false
+    requirements: 
+    - - ~>
+      - !ruby/object:Gem::Version 
+        hash: 3
+        segments: 
+        - 0
+        - 7
+        - 0
+        version: 0.7.0
+  type: :development
+  version_requirements: *id003
+- !ruby/object:Gem::Dependency 
+  name: hoe
+  prerelease: false
+  requirement: &id004 !ruby/object:Gem::Requirement 
+    none: false
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        hash: 27
+        segments: 
+        - 2
+        - 5
+        - 0
+        version: 2.5.0
+  type: :development
+  version_requirements: *id004
+description: |-
+  Win32::Console allows controling the windows command line terminal
+  thru an OO-interface. This allows you to query the terminal (find
+  its size, characters, attributes, etc). The interface and functionality
+  should be identical to Perl's counterpart.
+  
+  A port of Perl's Win32::Console and Win32::Console::ANSI modules.
+  
+  This gem packages Gonzalo Garramuno's Win32::Console project, and includes
+  a compiled binary for speed. The Win32::Console project's home can be
+  found at:
+  
+    http://rubyforge.org/projects/win32console
+email: 
+- ggarra@advancedsl.com.ar
+- jgbailey@gmail.com
+- luislavena@gmail.com
+executables: []
+
+extensions: []
+
+extra_rdoc_files: 
+- History.txt
+- Manifest.txt
+- README.txt
+- extra/Console.rdoc
+- extra/Console_ANSI.rdoc
+files: 
+- History.txt
+- Manifest.txt
+- Rakefile
+- README.txt
+- ext/Console_ext/Console.c
+- ext/Console_ext/extconf.rb
+- extra/Console.rdoc
+- extra/Console_ANSI.rdoc
+- lib/win32console.rb
+- lib/Win32/Console.rb
+- lib/Win32/Console/ANSI.rb
+- lib/Win32/Console/api.rb
+- lib/Win32/Console/constants.rb
+- tasks/gem.rake
+- tasks/native.rake
+- test/test_cursor.rb
+- test/test_mouse.rb
+- test/test_readinput.rb
+- test/test_readoutput.rb
+- test/test_sendevent.rb
+- test/test_title.rb
+- test/test_write.rb
+- test/test_std.rb
+- lib/1.8/Console_ext.so
+- lib/1.9/Console_ext.so
+has_rdoc: true
+homepage: http://rubyforge.org/projects/winconsole
+licenses: []
+
+post_install_message: 
+rdoc_options: 
+- --main
+- README.txt
+- --exclude
+- ext
+require_paths: 
+- lib
+- ext
+required_ruby_version: !ruby/object:Gem::Requirement 
+  none: false
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      hash: 59
+      segments: 
+      - 1
+      - 8
+      - 6
+      version: 1.8.6
+required_rubygems_version: !ruby/object:Gem::Requirement 
+  none: false
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      hash: 3
+      segments: 
+      - 0
+      version: "0"
+requirements: []
+
+rubyforge_project: winconsole
+rubygems_version: 1.3.7
+signing_key: 
+specification_version: 3
+summary: Win32::Console allows controling the windows command line terminal thru an OO-interface
+test_files: 
+- test/test_mouse.rb
+- test/test_std.rb
+- test/test_readoutput.rb
+- test/test_write.rb
+- test/test_readinput.rb
+- test/test_sendevent.rb
+- test/test_title.rb
+- test/test_cursor.rb
+
