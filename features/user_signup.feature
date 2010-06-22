@@ -43,7 +43,7 @@ Feature: regist as member
       | password  	| 1111qqqq    		| 
       | Confirmation| 1111qqqq     		| 
     And I press "Sign Up"  
-   	Then I should go to profile page for "Milkar"	
+   	Then I should go to profile page for "milkar"	
    	
    	 
  

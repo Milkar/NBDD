@@ -9,7 +9,7 @@ Feature: regist as member
       | email 		| milkar5@gmail.com	|
       | password  	| 1111qqqq    		| 
     And I press "Sign in"  
-   	Then I should go to profile page for "Milkar"	
+   	Then I should go to profile page for "milkar"	
    	
    	 
  
