@@ -126,6 +126,26 @@ td.sidebar {
 	margin-bottom: -15px;
 }
 
+/* user_profile */
+.user_profile  {
+	/*text-align: center;*/
+	margin-top: 13px;
+	width: 401;
+	margin-left: auto;
+	padding-left:10px;
+	margin-right: auto;
+	background-color:#FFF6BF;
+}
+
+/* Link to button in the dashboard */
+.linkto_button a  {
+	text-align: center;
+	padding-left:10px;
+	padding-right:10px;
+	background-color:#FBE3E4;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
 
 /*Error msg*/
 .fieldWithErrors {

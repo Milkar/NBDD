@@ -1,23 +1,21 @@
-<p>
-  <b>User:</b>
-  <%=h @client.user %>
-</p>
+<%= render 'user_profile' %>
+<h3>Client's profile:</h3
 
-<p>
+<div class="field">
   <b>Company:</b>
   <%=h @client.company %>
-</p>
+</div>
 
-<p>
+<div class="field">
   <b>Address:</b>
   <%=h @client.address %>
-</p>
+</div>
 
-<p>
+<div class="field">
   <b>Tel:</b>
   <%=h @client.tel %>
-</p>
+</div>
 
 
-<%= link_to 'Edit', edit_client_path(@client) %> |
-<%= link_to 'Back', clients_path %>
+<%= link_to 'Edit', [:edit, @user, @client] %> |
+<%= link_to 'Back', user_clients_path %>

@@ -2,15 +2,15 @@
 	<tr>
 		<td class="main">
 			<h2>
-			<%= @user.name %>
+			<%= @user.name %>'s profile
 			</h2>
 		</td>
 	</tr>
 	<tr>
-		
-		<% if @user.has_client? %>
+		<% if @user.clients.size != 0 %>
 		<td class="sidebar round">
-			<%= render :partial => "client_form"%>>
+			<%= link_to 'Clients', user_clients_path(@user) %>
+
 		</td>
 		<% else %>
 		<td class="sidebar round">	
@@ -18,7 +18,8 @@
 			
 		</td>
 		<td class="sidebar ">	
-			<%= link_to "add client", add_client_path, :class => " round" %>			
+			<%= link_to "add client", add_client_path, :class => " round" %>	
+					
 		</td>
 		<% end %>
 		

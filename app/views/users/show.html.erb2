@@ -1,0 +1,22 @@
+<table class="profile">
+	<tr>
+		<td class="main">
+			<h2>
+			<%= @user.name %>'s profile
+			</h2>
+		</td>
+	</tr>
+	<tr>
+		
+		
+		<td class="sidebar round">	
+			<strong>There is no client. pls add one</strong> <br />
+			
+		</td>
+		<td class="sidebar ">	
+			<%= link_to "add client", add_client_path, :class => " round" %>	
+					
+		</td>
+		
+	</tr>	
+</table>

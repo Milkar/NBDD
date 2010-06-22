@@ -1,7 +1,7 @@
 require 'digest'
 
 class User < ActiveRecord::Base
-  has_many :contacts
+  
   has_many :clients
   
   attr_accessible :name, :email, :password, :password_confirmation
@@ -38,7 +38,11 @@ class User < ActiveRecord::Base
   end
   
   def has_client?
-    
+    if user.clients.size != null
+      true
+    else
+      false
+    end
   end
   
   def contact_list
