@@ -18,7 +18,7 @@ describe MainController do
     
     it "should have the right link for sign up" do
       get 'home'
-      response.should have_tag('a', 'Sign un now!')        
+      response.should have_tag('a', 'Sign up now!')        
     end
     
     it "should have the right link for home" do
